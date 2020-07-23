@@ -4,7 +4,7 @@ export const initialToDoState = {
             task: 'Type out your task & add it to your list!',
             id: 1,
             complete: false
-        }        
+        }  
     ]
 };
 
@@ -35,9 +35,7 @@ export const listReducer = (state, action) => {
                 return !item.complete;
             })
         }
-
- 
-
+        
         default:
           return state;
       }

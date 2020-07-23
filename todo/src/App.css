@@ -43,4 +43,16 @@ li {
 
 .complete {
   text-decoration: line-through;
+  animation-name: spin;
+  animation-duration: 1000ms;
+  color: grey;
+}
+
+@keyframes spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
 }
