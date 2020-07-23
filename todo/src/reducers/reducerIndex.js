@@ -1,7 +1,7 @@
 export const initialToDoState = {
     listItems:[
         {
-            task: 'Type out your task & add your 1st item!',
+            task: 'Type out your task & add it to your list!',
             id: 1,
             complete: false
         }        
@@ -17,16 +17,6 @@ export const listReducer = (state, action) => {
           };
 
     case 'TOGGLE_COMPLETE':
-        // return state.map(item => {
-        //     if (item.id === action.payload) {
-        //       return {
-        //         ...item,
-        //         complete: true
-        //       }
-        //     }
-        //     return item
-        //   });
-
         return {
             listItems: state.listItems.map(item => {
                 if (item.id === action.payload) {

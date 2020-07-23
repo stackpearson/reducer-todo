@@ -31,10 +31,12 @@ function App() {
         >
         Add Task
       </button>
+      <button>Remove Complete</button>
 
       {state.listItems.map(item => (
         <li key={item.id}
         onClick={ () => dispatch({type: 'TOGGLE_COMPLETE', payload: item.id})}
+        className={`to-do-item${item.complete ? ' complete': ''}`}
         >{item.task}
         </li>
       ))}
@@ -43,3 +45,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
