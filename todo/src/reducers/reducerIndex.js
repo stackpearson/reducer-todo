@@ -16,8 +16,35 @@ export const listReducer = (state, action) => {
             listItems: state.listItems.concat(action.payload)
           };
 
+    case 'TOGGLE_COMPLETE':
+        // return state.map(item => {
+        //     if (item.id === action.payload) {
+        //       return {
+        //         ...item,
+        //         complete: true
+        //       }
+        //     }
+        //     return item
+        //   });
+
+        return {
+            listItems: state.listItems.map(item => {
+                if (item.id === action.payload) {
+                    return {
+                        ...item,
+                        complete: !item.complete
+                    }
+                }
+                return item
+            })
+        };
+
+ 
+
         default:
           return state;
       }
-}
+};
+
+
 

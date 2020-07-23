@@ -34,7 +34,9 @@ function App() {
 
       {state.listItems.map(item => (
         <li key={item.id}
-        >{item.task}</li>
+        onClick={ () => dispatch({type: 'TOGGLE_COMPLETE', payload: item.id})}
+        >{item.task}
+        </li>
       ))}
     </div>
   );
