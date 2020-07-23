@@ -31,7 +31,9 @@ function App() {
         >
         Add Task
       </button>
-      <button>Remove Complete</button>
+      <button
+        onClick={ () => dispatch({type: 'REMOVE_COMPLETE'})}
+      >Remove Complete</button>
 
       {state.listItems.map(item => (
         <li key={item.id}

@@ -29,6 +29,13 @@ export const listReducer = (state, action) => {
             })
         };
 
+    case 'REMOVE_COMPLETE':
+        return {
+            listItems: state.listItems.filter(item => {
+                return !item.complete;
+            })
+        }
+
  
 
         default:
