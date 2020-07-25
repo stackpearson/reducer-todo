@@ -1,5 +1,16 @@
+html{
+  background-color: #212020;
+}
 .App {
   text-align: center;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: #D2D2D2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .App-logo {
@@ -55,4 +66,32 @@ li {
   to{
     transform:rotate(360deg);
   }
+}
+
+.add-button {
+  background-color:green;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.button {
+  width: 250px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.remove-button {
+  background-color:red;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 5px;
+}
+
+.list-container {
+  border: 1px solid black;
+  padding: 15px 10px;
+  max-width: 550px;
+  margin: 0 auto;
 }

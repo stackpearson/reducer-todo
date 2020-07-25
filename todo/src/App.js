@@ -14,15 +14,18 @@ function App() {
 
   return (
     <div className="App">
-      <input 
-      placeholder='New Task'
-      type='text'
-      name='newListItem'
-      onChange={handleChanges}
-      value={newToDo}
+      <div>
+        <input className='button'
+        placeholder='New Task'
+        type='text'
+        name='newListItem'
+        onChange={handleChanges}
+        value={newToDo}
       />
+      </div>
+  
 
-      <button
+      <div className='button add-button'
         onClick={ () => dispatch({type: 'ADD_TODO', payload: {
           task: newToDo,
           id: Date.now(),
@@ -30,11 +33,9 @@ function App() {
         })}
         >
         Add Task
-      </button>
-      <button
-        onClick={ () => dispatch({type: 'REMOVE_COMPLETE'})}
-      >Remove Complete</button>
-
+      </div>
+      
+      <div className='list-container'>
       {state.listItems.map(item => (
         <li key={item.id}
         onClick={ () => dispatch({type: 'TOGGLE_COMPLETE', payload: item.id})}
@@ -42,6 +43,12 @@ function App() {
         >{item.task}
         </li>
       ))}
+      </div>
+
+    <div className='button remove-button'
+        onClick={ () => dispatch({type: 'REMOVE_COMPLETE'})}
+      >Remove Complete
+      </div>
     </div>
   );
 }
